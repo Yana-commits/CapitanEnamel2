@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 367948660135514197}
   - component: {fileID: 2846851141069910279}
   m_Layer: 0
-  m_Name: CandyAttck
+  m_Name: CandyFall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,7 +42,7 @@ Animator:
   m_GameObject: {fileID: 1706481463016696447}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 821decc9229c7344d8a026768c44bbb6, type: 2}
+  m_Controller: {fileID: 9100000, guid: 66f8afd2cd6a3c244ac6b21befa1f9d8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

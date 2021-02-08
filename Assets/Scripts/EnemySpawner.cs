@@ -52,7 +52,7 @@ public class EnemySpawner : MonoBehaviour
                 var enemy = currentEnemies.Dequeue();
                 var script = enemies[enemy];
                 enemy.SetActive(true);
-
+                
                 script.Init(level, Index);
 
                 float xPos = Random.Range(-border, border);
@@ -67,6 +67,6 @@ public class EnemySpawner : MonoBehaviour
         enemy.transform.position = transform.position;
         enemy.SetActive(false);
         currentEnemies.Enqueue(enemy);
-        Debug.Log("mmm");
+        //Debug.Log("mmm");
     }
 }
