@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float speed;
+    protected float speed;
    public Rigidbody2D rigidbody2D;
     public static Action<GameObject> EnemyReturn;
     public Animator anim;
@@ -17,4 +17,6 @@ public class Enemy : MonoBehaviour
         speed = fallin.speed;
         //var anim = GetComponent<Animator>();
     }
+
+    
 }

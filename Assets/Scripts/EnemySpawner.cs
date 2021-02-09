@@ -14,7 +14,7 @@ public class EnemySpawner : MonoBehaviour
     private float border;
     [SerializeField]
     private LevelRepository level;
-    private int Index=0;
+    private int Index=1;
     public static Dictionary<GameObject,Enemy> enemies;
     public Queue<GameObject> currentEnemies;
     void Start()

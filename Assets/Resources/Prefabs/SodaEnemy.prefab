@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5030362247997991464}
   - component: {fileID: 5030362247997991471}
   - component: {fileID: 5030362247997991470}
-  - component: {fileID: 5030362247997991469}
   - component: {fileID: -481102227504581790}
-  - component: {fileID: 3733528259086832623}
+  - component: {fileID: 8650548439425673012}
+  - component: {fileID: 4505514843186216496}
   m_Layer: 0
   m_Name: SodaEnemy
   m_TagString: Untagged
@@ -98,28 +98,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &5030362247997991469
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5030362247997991459}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.1
 --- !u!95 &-481102227504581790
 Animator:
   serializedVersion: 3
@@ -139,7 +123,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3733528259086832623
+--- !u!114 &8650548439425673012
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,9 +132,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 5030362247997991459}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 527869e74473f4345a1e193c4360f0c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 4bf0409b8b8967742b1ebee4f00cbbc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
   rigidbody2D: {fileID: 5030362247997991470}
   anim: {fileID: -481102227504581790}
+  direction: {x: 0.1, y: 1}
+  accelerastion: 15
+--- !u!61 &4505514843186216496
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5030362247997991459}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.017655611, y: 0.052212954}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 19.2, y: 10.8}
+    newSize: {x: 19.2, y: 10.8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.037386, y: 1.5094476}
+  m_EdgeRadius: 0

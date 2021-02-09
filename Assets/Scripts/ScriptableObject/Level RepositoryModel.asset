@@ -18,13 +18,14 @@ MonoBehaviour:
     fallinEnemy:
       enemy: {fileID: 5030362247997991459, guid: d7afab855c74b324197f27debd79cb39,
         type: 3}
-      speed: 5
+      speed: 3
       damage: 0
   - background: {r: 0, g: 0, b: 0, a: 0}
-    sceneImage: {fileID: 0}
+    sceneImage: {fileID: 21300000, guid: d90d959e1f7250648b37356c9d8ae659, type: 3}
     fallinEnemy:
-      enemy: {fileID: 0}
-      speed: 0
+      enemy: {fileID: 5030362247997991459, guid: 2dfb50b05514309458026055b04ad17a,
+        type: 3}
+      speed: 2
       damage: 0
   - background: {r: 0, g: 0, b: 0, a: 0}
     sceneImage: {fileID: 0}
