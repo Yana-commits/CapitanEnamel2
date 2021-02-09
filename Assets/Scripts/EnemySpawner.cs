@@ -7,7 +7,6 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField]
     private int poolCount;
-    [SerializeField]
     private GameObject enemyPrefab;
     [SerializeField]
     private float spawnTime;
@@ -22,6 +21,8 @@ public class EnemySpawner : MonoBehaviour
     {
         enemies = new Dictionary<GameObject, Enemy>();
         currentEnemies = new Queue<GameObject>();
+
+        enemyPrefab = level.LevelList[Index].fallinEnemy.enemy;
 
         for (int i = 0; i < poolCount; i++)
         {
@@ -63,7 +64,6 @@ public class EnemySpawner : MonoBehaviour
 
     private void ReturnEnemy(GameObject enemy)
     {
-       
         enemy.transform.position = transform.position;
         enemy.SetActive(false);
         currentEnemies.Enqueue(enemy);
