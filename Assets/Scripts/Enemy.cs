@@ -7,7 +7,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float speed;
-    [SerializeField] Rigidbody2D rigidbody2D;
+   public Rigidbody2D rigidbody2D;
     public static Action<GameObject> EnemyReturn;
 
     public void Init(LevelRepository levelRepository, int index)
