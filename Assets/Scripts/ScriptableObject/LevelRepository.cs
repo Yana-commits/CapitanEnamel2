@@ -25,8 +25,7 @@ namespace Game.Level
     [Serializable]
     public class FallinEnemy
     {
-        public Sprite sprite;
-        public Animator animator;
+        public GameObject enemy;
         public float speed;
         public int damage;
     }
