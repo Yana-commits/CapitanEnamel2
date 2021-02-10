@@ -14,7 +14,7 @@ public class EnemySpawner : MonoBehaviour
     private float border;
     [SerializeField]
     private LevelRepository level;
-    private int Index=1;
+    private int Index=2;
     public static Dictionary<GameObject,Enemy> enemies;
     public Queue<GameObject> currentEnemies;
     void Start()
@@ -68,5 +68,10 @@ public class EnemySpawner : MonoBehaviour
         enemy.SetActive(false);
         currentEnemies.Enqueue(enemy);
         //Debug.Log("mmm");
+    }
+
+    private void OnDestroy()
+    {
+        Enemy.EnemyReturn -= ReturnEnemy;
     }
 }

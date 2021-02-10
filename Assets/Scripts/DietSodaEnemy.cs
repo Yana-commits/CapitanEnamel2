@@ -15,14 +15,16 @@ public class DietSodaEnemy : Enemy
     void OnBecameInvisible()
     {
         Debug.Log("return");
-        EnemyReturn?.Invoke(gameObject);
+        Back();
+        touch = 1;
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.tag == "Tooth")
         {
-            EnemyReturn?.Invoke(gameObject);
+            Back();
+            touch = 1;
         }
         else if (collider.tag == "Player")
         {
@@ -38,10 +40,14 @@ public class DietSodaEnemy : Enemy
     {
         if (touch == 0)
         {
-            EnemyReturn?.Invoke(gameObject);
+            Back();
             touch = 2;
         }
         touch--;
         Debug.Log($"{touch}");
+    }
+    private void Back()
+    {
+        EnemyReturn?.Invoke(gameObject);
     }
 }

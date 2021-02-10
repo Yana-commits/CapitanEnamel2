@@ -4,9 +4,17 @@ using UnityEngine;
 
 public class EnergyDrinkEnemy : Enemy
 {
+    private float x = 0f;
     void FixedUpdate()
     {
-        rigidbody2D.position += (Vector2.down * speed) * Time.fixedDeltaTime;
+        Avoid();
+
+        rigidbody2D.position += ( new Vector2(x,-1) * speed) * Time.fixedDeltaTime;
+    }
+    void OnBecameInvisible()
+    {
+        Debug.Log("return");
+        EnemyReturn?.Invoke(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
@@ -19,6 +27,20 @@ public class EnergyDrinkEnemy : Enemy
         {
             Debug.Log("BBB");
             EnemyReturn?.Invoke(gameObject);
+        }
+    }
+
+    private void Avoid()
+    {
+        Transform playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+
+        if ((Mathf.Abs(transform.position.x - playerTransform.position.x) < 2) && ((transform.position.x - playerTransform.position.x) < 0))
+        {
+            x =-2f;
+        }
+        else if ((Mathf.Abs(transform.position.x - playerTransform.position.x) < 2) && ((transform.position.x - playerTransform.position.x) > 0))
+        {
+            x = 2f;
         }
     }
 }
